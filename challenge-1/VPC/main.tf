@@ -1,16 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "3.48.0"
-    }
-  }
-}
-
-provider "aws" {
-  region = "eu-west-2"
-}
-
 resource "aws_vpc" "interviewChallenge1" {
 	cidr_block = "192.168.7.0/24"
 	enable_dns_hostnames = true
@@ -56,16 +43,16 @@ resource "aws_route_table" "challenge1RT" {
 
 resource "aws_route_table_association" "EC2_RTA" {
 	subnet_id = aws_subnet.EC2Subnet.id
-	route_table_id = aws_route_table.challenge1RT
+	route_table_id = aws_route_table.challenge1RT.id
 }
 
 resource "aws_route_table_association" "RDS_RTA" {
 	subnet_id = aws_subnet.RDSSubnet.id
-	route_table_id = aws_route_table.challenge1RT
+	route_table_id = aws_route_table.challenge1RT.id
 }
 
 resource "aws_network_acl" "main" {
-  vpc_id = aws_vpc.main.id
+  vpc_id = aws_vpc.interviewChallenge1.id
 
   egress {
     protocol   = "tcp"
