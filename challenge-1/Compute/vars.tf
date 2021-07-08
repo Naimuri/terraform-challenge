@@ -8,6 +8,10 @@ variable "RDSSubnetID" {
     type = string
 }
 
+variable "RDSSubnet1ID" {
+    description = "Subnet ID for RDS Subnet 1"
+    type = string
+}
 variable "instanceType" {
     description = "Type of EC2 Instance"
     type = string
