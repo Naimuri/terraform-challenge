@@ -1,3 +1,10 @@
 # Platform Team Recruitment
 
-A repository containing various infrastructures to be used during the recruitment of new staff for the platform team
+This repository is to serve as a place to store platform team recruitment resources.
+
+## Directories
+
+### Challenge 1 
+* Authored: Monday 12th July 2021
+* IaC challenge
+* Ammend IaC to improve system based on requirements of brief
