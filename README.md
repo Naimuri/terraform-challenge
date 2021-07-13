@@ -1,6 +1,6 @@
 # Platform Team Recruitment
 
-This repository is to serve as a place to store platform team recruitment resources.
+This repository is to serve as a place to store Platform Team recruitment resources.
 
 ## Directories
 
